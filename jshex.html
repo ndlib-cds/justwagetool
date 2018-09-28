@@ -1,0 +1,176 @@
+<html>
+<head>
+<style>
+
+/* hex tile css from https://jtauber.github.io/articles/css-hexagon.html */
+    .hex2 {
+        float: left;
+        margin-right: -26px;
+        margin-bottom: -50px;
+    }
+    .hex2 .left {
+        float: left;
+        width: 0;
+        border-right: 30px solid #6C6;
+        border-top: 52px solid transparent;
+        border-bottom: 52px solid transparent;
+    }
+    .hex2 .middle {
+        float: left;
+        width: 60px;
+        height: 104px;
+        background: #6C6;
+    }
+    .hex2 .right {
+        float: left;
+        width: 0;
+        border-left: 30px solid #6C6;
+        border-top: 52px solid transparent;
+        border-bottom: 52px solid transparent;
+    }
+    .hex2-row {
+        clear: left;
+    }
+    .hex2.even {
+        margin-top: 53px;
+    }
+
+    .tiletext {
+    	visibility: hidden;
+    }
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.left {
+    width: 25%;
+}
+
+.right {
+    width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+
+<script>
+
+function chooseDiv() {
+    if (document.getElementById("selectionDiv1").checked) {
+        document.getElementById("div1").style.visibility = "visible";
+    } else {
+        document.getElementById("div1").style.visibility = "hidden";
+    }
+
+    if (document.getElementById("selectionDiv2").checked) {
+        document.getElementById("div2").style.visibility = "visible";
+    } else {
+        document.getElementById("div2").style.visibility = "hidden";
+    }
+
+    if (document.getElementById("selectionDiv3").checked) {
+        document.getElementById("div3").style.visibility = "visible";
+    } else {
+        document.getElementById("div3").style.visibility = "hidden";
+    }
+
+    if (document.getElementById("selectionDiv4").checked) {
+        document.getElementById("div4").style.visibility = "visible";
+    } else {
+        document.getElementById("div4").style.visibility = "hidden";
+    }
+
+    if (document.getElementById("selectionDiv5").checked) {
+        document.getElementById("div5").style.visibility = "visible";
+    } else {
+        document.getElementById("div5").style.visibility = "hidden";
+    }
+
+    if (document.getElementById("selectionDiv6").checked) {
+        document.getElementById("div6").style.visibility = "visible";
+    } else {
+        document.getElementById("div6").style.visibility = "hidden";
+    }
+
+    if (document.getElementById("selectionDiv7").checked) {
+        document.getElementById("div7").style.visibility = "visible";
+    } else {
+        document.getElementById("div7").style.visibility = "hidden";
+    }
+}
+</script>
+</head>
+
+<body>
+
+<div class="row">
+
+	<div class="column left">
+
+    <form role="form" autocomplete="off">
+            <div class="checkbox" id="checkboxSelection" onclick="chooseDiv()">
+                <label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv1" unchecked/>criterion 1
+                </label>
+		<br>
+                <label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv2" unchecked/>criterion 2
+                </label>
+		<br>
+		<label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv3" unchecked/>criterion 3
+                </label>
+		<br>
+                <label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv4" unchecked/>criterion 4
+                </label>
+		<br>
+  		<label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv5" unchecked/>criterion 5
+                </label>
+		<br>
+                <label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv6" unchecked/>criterion 6
+                </label>
+		<br>
+  		<label>
+                    <input type="checkbox" name="optcheckbox" id="selectionDiv7" unchecked/>criterion 7
+                </label>
+            </div>
+    </form>
+	</div>
+
+	<div class="column right">
+
+
+    <div class="hex2-row">
+        <div style="visibility:hidden" class="hex2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+        <div class="hex2 even"><div class="left"></div><div class="middle"><div class="tiletext" id="div3">criterion 3</div></div><div class="right"></div></div>
+        <div style="visibility:hidden" class="hex2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+    </div>
+    <div class="hex2-row">
+        <div class="hex2"><div class="left"></div><div class="middle"><div class="tiletext" id="div2">criterion 2</div></div><div class="right"></div></div>
+        <div class="hex2 even"><div class="left"></div><div class="middle"><div class="tiletext" id="div1">criterion 1</div></div><div class="right"></div></div>
+        <div class="hex2"><div class="left"></div><div class="middle"><div class="tiletext" id="div4">criterion 4</div></div><div class="right"></div></div>
+    </div>
+    <div class="hex2-row">
+        <div class="hex2"><div class="left"></div><div class="middle"><div class="tiletext" id="div5">criterion 5</div></div><div class="right"></div></div>
+        <div class="hex2 even"><div class="left"></div><div class="middle"><div class="tiletext" id="div6">criterion 6</div></div><div class="right"></div></div>
+        <div class="hex2"><div class="left"></div><div class="middle"><div class="tiletext" id="div7">criterion 7</div></div><div class="right"></div></div>
+    </div>
+
+	</div>
+
+</div>
+
+</body>
+
+<html>
